@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesquisa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <style>
+    @media screen and (min-width:320px) and (max-width:768px) {
+      main {
+        min-width: 100vw;
+        display: block;
+        margin: auto;
+      }
+
+      body {
+        min-width: 100vw;
+
+
+      }
+
+      .navbar {
+        display: block;
+        margin: auto;
+        min-width: 100vw;
+        min-height: 70px;
+        color: black;
+        z-index: 9999;
+        --bs-navbar-padding-y: 0;
+
+
+
+      }
+
+      .li {
+        /* lista de linhas de*/
+        margin-left: 0;
+      }
+
+      li {
+        display: flex;
+        background-color: rgba(225, 225, 238, 0.173);
+        background-size: 10px;
+        margin-top: 1%;
+        margin-left: 66vw;
+        align-items: right;
+        padding: 0%;
+        text-align: left;
+        height: 50px;
+        padding-top: 5%;
+
+
+
+      }
+
+
+
+      li:hover {
+        color: white;
+        background-color: #2bad61;
+
+
+      }
+
+      .container-fluid {
+        background-color: #09090900;
+        height: 0%;
+      }
+
+      .nav-item {
+        border: 3px solid rgba(255, 0, 0, 0);
+        width: 30vw;
+        align-items: end;
+        background-color: #4c7baa;
+        color: #ffffff;
+        flex-direction: row;
+        vertical-align: middle;
+
+
+
+
+
+      }
+
+
+
+      .botoes {
+
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+
+      }
+
+      #Título3 {
+        text-align: center;
+      }
+
+      button.button {
+        min-width: 20vw;
+
+      }
+
+      .card-body {
+        min-width: 50vw;
+        flex-direction: row;
+        justify-content: center;
+        margin: auto;
+
+      }
+
+      p {
+        display: flex;
+        margin: 0;
+        align-items: center;
+        gap: 5%;
+        flex-direction: column;
+        padding: 0px;
+
+
+      }
+
+      .btn {
+        margin: auto;
+      }
+
+
+      #section9 {
+        height: auto;
+        margin: auto;
+
+      }
+
+
+
+
+
+
+
+      div.card.card-body {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100vw;
+        text-align: left;
+        height: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+
+      }
+
+      .card.card-body.mais-estreito {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100vw;
+        text-align: center;
+        height: min-content;
+
+      }
+
+      .btn-custom {
+        margin-top: 5%;
+
+
+
+      }
+
+      .carousel-caption {
+        padding: 2%;
+        text-align: justify;
+        width: 90vw;
+        justify-content: center;
+        margin-left: -10%;
+        margin-right: 30%;
+      }
+
+
+      p.text-center.text-center {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+      }
+
+
+
+    }
+  </style>
+  <style>
+    /* Estilos personalizados */
+    .carousel-caption {
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Adicione um fundo semi-transparente para a legenda do carousel */
+      color: #fff;
+      /* Defina a cor do texto para branco */
+    }
+
+    .carousel-caption h5 {
+      font-size: 24px;
+      /* Aumente o tamanho da fonte do título da legenda */
+    }
+
+    .carousel-caption p {
+      font-size: 18px;
+      /* Aumente o tamanho da fonte do conteúdo da legenda */
+    }
+
+    body {
+      width: 100vw;
+      margin: auto;
+    }
+
+    .navbar>.container-fluid {
+      background-color: #4c7baa;
+      font-size: 1rem;
+      margin: 1;
+
+    }
+
+    .navbar {
+      width: 100vw;
+      height: 50px;
+      font-size: 1rem;
+      top: 0px;
+
+      background-color: #4c7baa;
+      --bs-navbar-color: #ffffff;
+      --bs-navbar-active-color: #ffffff;
+      --bs-navbar-brand-color: #ffffff;
+
+
+    }
+
+    .nav-item:hover {
+      background-color: #c0c4c2;
+      filter: brightness(1.5);
+      --bs-navbar-color: #ffffff;
+      --bs-navbar-active-color: #0b0b0b;
+      --bs-navbar-brand-color: #090909;
+    }
+
+
+
+    img {
+      height: 500px;
+      object-fit: cover;
+    }
+
+    a {
+
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 1.5rem;
+      border-radius: 5px;
+      padding: 1px;
+      margin: 15px;
+    }
+
+
+
+    .fundo {
+      background-image: url(./Assets/black-board.jpg);
+      opacity: 0.5;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: 0;
+      min-height: 100vh;
+      width: 100%;
+      padding-top: 0px;
+
+    }
+
+    #section9 {
+      /*PROJETOS*/
+      position: relative
+    }
+
+    
+
+    #Section9 {
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: 0;
+      z-index: -1;
+    }
+
+    #section9 .fundo {
+
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: 0;
+
+    }
+
+    #section9 .conteudo {
+      background-color: rgba(0, 0, 0, 0.6);
+      height: 100%;
+      opacity: 1;
+      z-index: 1;
+
+
+    }
+
+    p {
+      display: inline-block;
+      gap: 5%;
+      vertical-align: middle;
+      padding-bottom: 5%;
+
+    }
+
+    p.text-center {
+      display: flex;
+      flex-direction: row;
+      margin-top: 60px;
+      gap: 21%;
+      vertical-align: middle;
+      padding-bottom: 5%;
+      z-index: 99999;
+
+
+    }
+
+
+
+    .Título2 {
+
+      color: rgb(249, 247, 247);
+      font-size: 4em;
+      text-shadow: 1px 1px 3px #0c0c0c;
+      padding-top: 3%;
+
+    }
+
+
+
+
+    .card-body {
+      justify-content: center;
+      text-align: justify;
+      height: auto;
+      margin-top: 3%;
+      margin-left: 10%;
+
+    }
+
+    .card.card-body {
+      padding-top: 2%;
+      margin-top: -2%;
+      margin-bottom: 8%;
+
+    }
+
+
+
+    .card-body.mais-estreito {
+      width: 200px;
+      text-align: center;
+      margin-left: 28%;
+
+
+    }
+
+    .btn-custom {
+      width: 200px;
+      gap: 40%;
+      padding: 20px;
+      height: 80px;
+      text-align: center;
+      vertical-align: middle;
+
+    }
+
+    .text-center {
+      display: flex;
+      gap: 20%;
+      justify-content: center;
+      margin: auto;
+    }
+
+    p {
+      padding-top: 2%;
+      margin: auto;
+    }
+
+    a.btn.btn-primary.btn-custom {
+      margin: 0%;
+      padding: 20px;
+    }
+
+    .btn:hover,
+    .btn:active,
+    .btn:focus {
+      background-color: #2bad61;
+      border-color: #2bad61;
+
+    }
+
+    h1 {
+      text-align: center;
+      padding-top: 5%;
+    }
+
+    .link {
+      color: #090909;
+      font-size: 1rem;
+    }
+
+    .link:hover {
+      background-color: #4c7baa;
+      color: #ffffff;
+    }
+
+    button {
+      display: inline;
+      margin-top: 0%;
+      font-size: 1rem;
+      background-color: #F0FFFF;
+      width: max-content;
+      border: 1px solid #4c7baa;
+      border-radius: 15px;
+    }
+
+    button:hover {
+      background-color: #4c7baa23;
+      color: #ffffff;
+
+    }
+
+    footer {
+      background-color: #4c7baa;
+      font-family: 'monsterrat', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      color: white;
+      text-align: center;
+      justify-content: center;
+      height: 200px;
+      padding-top: 0px;
+      width: 100vw;
+      margin: auto;
+
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .endereço p {
+      margin-top: 0;
+      padding: 1%;
+      height: 0px;
+
+    }
+
+    html {
+      height: fit-content;
+    }
+  </style>
+</head>
+<main>
+
+
+  <header> <!--NAVBAR-->
+
+    <nav class="navbar navbar-expand-lg"><!--bg-body-tertiary-->
+      <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">CPqCTR</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+              aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon" style="height: 30px;"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="O Centro.html">O Centro</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          Infraestrutura
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="LRAD.html">LRAD</a></li>
+                          <li><a class="dropdown-item" href="LPAM.html">LPAM</a></li>
+                          <li><a class="dropdown-item" href="LARX.html">LARX</a></li>
+                          <li><a class="dropdown-item" href="LAMP.html">LAMP</a></li>
+                          <li><a class="dropdown-item" href="LPA.html">LPA</a></li>
+                          <li><a class="dropdown-item" href="LEL.html">LEL</a></li>
+                          <li><a class="dropdown-item" href="LPA.html">LPA</a></li>
+                          <li><a class="dropdown-item" href="LEG.html">LEG</a></li>
+                          <li>
+                              <hr class="dropdown-divider">
+                          </li>
+                          <li><a class="dropdown-item" href=".html">Auditório</a></li>
+                      </ul>
+                  <li class="nav-item">
+                      <a class="nav-link" href="Pesquisa.html">Pesquisa</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="equipe.html">Equipe</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#section4">Contato</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#section5">Localização</a>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          Links
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="Equipe2.html">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li>
+                              <hr class="dropdown-divider">
+                          </li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                  </li>
+              </ul>
+              <span class="navbar-text">
+                  <!--Navbar text with an inline element-->
+              </span>
+          </div>
+      </div>
+  </nav>
+    <!--END OF NAVBAR-->
+  </header>
+
+  <body>
+    <!-- <section COLLAPSABLE MENU - REMOVIDO>
+      <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4">
+            <div>
+              <nav>
+                <ul class="menu">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="O Centro.html">O Centro</a></li>
+                  <li><a class="lab" href="#">Laboratórios</a>
+
+                  </li>
+                  <li><a class="linhas" href="Pesquisa.html">Pesquisa</a>
+
+                  </li>
+                  <li><a class="" href="#section3">Notícias & Eventos</a></li>
+                  <li><a class="" href="equipe.html">Equipe</a></li>
+                  <li><a class="" href="Pesquisa2.html">Links</a></li>
+                  <li><a class="" href="#section4">Contato</a></li>
+                </ul>
+              </nav>
+            </div> <span class="text-muted">Toggleable via the navbar brand.</span>
+          </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+      </div>
+    </section>-->
+    <section>
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./assets/Foto 6 Mestranda Krizia Capizzi junto a co-orientador Prof. Anderson Mol.jpg"
+              class="d-block w-100" alt="Mestranda Krizia Capizzi junto a co-orientador Prof. Anderson Mol">
+            <div class="carousel-caption d-md-block">
+              <h5></h5>
+              <p>Aluna de PROFISICA Krizia Capizzi durante a analise de imagens mamograficas na workstation
+                especializada em imagens radiológicas do CTR junto ao coorientador Prof. Anderson Mol.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="Assets\Foto 7 Prof Luis Nieto colaborador UESB do CTR junto a equipe de alunos no AFM.jpg"
+              class="d-block w-100" alt="Prof Luis Nieto colaborador UESB do CTR junto a equipe de alunos no AFM">
+            <div class="carousel-caption d-md-block">
+              <h5></h5>
+              <p>Prof Luis Nieto colaborador UESB do CTR junto a equipe de alunos Matheus, Lucas e David no Microscópio
+                de Força Atômica. </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="Assets\Foto 8 Posdoutoranda Ivea Correia no FRX.jpg" class="d-block w-100"
+              alt="Posdoutoranda Ivea Correia no FRX">
+            <div class="carousel-caption d-md-block">
+              <h5></h5>
+              <p>Pós-Doutoranda Ivea Correia trabalhando no Espectrômetro de Fluorescência de Raios-X.<br>
+                Ivea concluiu Mestrado em PROFISICA e o Doutorado no PRODEMA.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="section9">
+      <div class="fundo">
+        <div class="conteudo">
+          <h1 class="Título2">Produção Científica</h1>
+          <p class="text-center">
+            <a class="btn btn-primary btn-custom" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+              aria-expanded="false" aria-controls="multiCollapseExample1" style="margin-right: 0px;">Linhas de
+              Pesquisa</a>
+            <button class="btn btn-primary btn-custom" type="button" data-bs-toggle="collapse"
+              data-bs-target="#multiCollapseExample2" aria-expanded="false"
+              aria-controls="multiCollapseExample2">Projetos
+              de Pesquisa</button>
+            <button class="btn btn-primary btn-custom" type="button" data-bs-toggle="collapse"
+              data-bs-target="#multiCollapseExample3" aria-expanded="false"
+              aria-controls="multiCollapseExample3">Produção
+              Acadêmica</button>
+          </p>
+          <div class="row">
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                  <strong>Biocinética de Radioisótopos:</strong><br>
+                  <ul>
+                    <li class="li">Contaminação Crônica na Cadeia Alimentar; </li>
+                  </ul>
+                  <strong> Física Médica:</strong><br>
+                  <ul>
+                    <li class="li">Desenvolvimento de Modelos Tomográficos para Cálculos Dosimétricos;</li>
+                  </ul>
+                  <ul>
+                    <li class="li">Qualidade em Radiodiagnóstico;</li>
+                  </ul>
+                  <strong>Física Nuclear:</strong><br>
+                  <ul>
+                    <li class="li">Estrutura Nuclear Deformada em Reações de Fissão;</li>
+                  </ul> <br>
+                  <ul>
+                    <li class="li"> Estudo de Reações de Spallation em Núcleos Pesados; </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample2">
+                <div class="card card-body">
+                  <div><strong>CNPq</strong>
+
+                    Aplicação de técnicas físico-químicas em estudos de poluição inorgânica e desenvolvimento de novas
+                    tecnologias ambientais (P - 20)
+                    <a class="button cnpq" href=""><button>Saiba Mais</button></a>
+                  </div>
+                  <div>
+                    <br>
+                    <strong>FAPESB</strong>
+                    Ampliação da instrumentação analítica para desenvolvimento das pesquisas em materiais, química,
+                    física e
+                    meio ambiente (I - 10)
+                    <a class="button fapesbe" href=""><button>Saiba Mais</button></a>
+                  </div>
+                  <br>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample3">
+                <div class="card card-body mais-estreito">
+                  <strong>Produção Acadêmica</strong>
+                  <a class="link" href="nova.html">2023</a>
+                  <a class="link" href="nova.html">2022</a>
+                  <a class="link" href="nova.html">2021</a>
+                  <a class="link" href="nova.html">2020</a>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+    </section>
+    <footer> <!--FOOTER-->
+
+
+      <div class="endereço" p>
+
+        <p>© CPqCTR </p> <br><br>
+        UNIVERSIDADE ESTADUAL DE SANTA CRUZ </br>
+        Campus Soane Nazaré de Andrade, Rodovia Jorge Amado, </br>
+        km 16, Bairro Salobrinho.
+        CEP 45662-900. Ilhéus-Bahia </p>
+        <br>
+
+        <p><a style="font-size: medium; color:blue; text-decoration: underline;" href="">Desenvolvido por Aroldo
+            Dias</a></p>
+
+      </div>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</main>
+
+</html>
