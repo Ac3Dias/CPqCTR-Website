@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Pesquisas em Ciências e Tecnologias das Radiações</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"> <!--Referenciado ao css-->
+    <style>
+<!-- Auto SLIDESHOW-->
+ 
+    .slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0;
+    border-radius: 5px;
+      
+    }
+
+    .slide {
+      display: none;
+     
+    }
+
+    .slide img {
+      width: 100%;
+      height: 322px;
+      margin-left: 15vw;
+      margin-top: -40vh;
+      
+    }
+
+    .slide .caption {
+      position: absolute;
+      bottom: 0;
+      margin-top:65vh;
+      left: 15vw;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 0 0 15px 15px;
+      color: #fff;
+      padding: 10px;
+      font-size: 16px;
+    }
+        @media screen and (min-width:320px) and (max-width:768px) {
+            .slideshow-container{
+                position: absolute;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 60vh;
+               display: contents;
+            }
+        .slide img {
+      width: 95%;
+      height: 322px;
+      margin-left: 2%;
+      margin-right: auto;
+      margin-top: 70vh;
+      
+      
+    }
+    .slide .caption {
+      position: absolute;
+      width: 95%;
+      height: 5%;
+      margin-left: -13%;
+      margin-right: auto;
+      margin-top: 75vh;
+    }
+
+            main {
+                width: 100vw;
+                display: block;
+                margin: auto;
+            }
+
+            body {
+                width: 100vw;
+
+
+            }
+
+
+
+            #section1 {
+                height: 75vh;
+            }
+
+
+            #logoo {
+                display: none;
+            }
+
+            header {
+                display: inline-flex;
+                flex-direction: column;
+                max-height: min-content;
+                margin-top: 0%;
+
+
+
+            }
+
+            .banner {
+                display: block;
+                float: center;
+                width: 100vw;
+                height: 30vh;
+                margin-top: 0;
+            }
+
+            .navbar-brand {
+                text-overflow: clip;
+            }
+
+            .navbar {
+                display: block;
+                margin: auto;
+                width: 100vw;
+                color: black;
+
+            }
+
+
+            li {
+                display: flex;
+                background-color: rgba(225, 225, 238, 0.173);
+                background-size: 20px;
+                margin-top: 1%;
+                margin-left: 66vw;
+                align-items: right;
+                padding: 0.3%;
+                text-align: left;
+
+
+            }
+
+            li:hover {
+                color: white;
+                background-color: #2bad61;
+
+
+            }
+
+            .nav-item {
+                border: 3px solid rgba(255, 0, 0, 0);
+                width: 30vw;
+                align-items: end;
+                background-color: #4c7baa;
+                color: #ffffff;
+                flex-direction: row;
+
+
+
+            }
+
+
+
+            #apresentação {
+                width: 90%;
+                text-align: justify;
+
+            }
+
+            .banner {
+                object-fit: fill;
+                width: 100%;
+            }
+
+            .quadro1 {
+                display: none;
+            }
+
+            .quadro2 {
+                display: none;
+            }
+
+            .quadro3 {
+                display: none;
+            }
+
+
+
+
+            #divcontato {
+                display: inline-flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                vertical-align: middle;
+                object-fit: fill;
+                width: 100vw;
+                height: 50vh;
+                padding: 1%;
+                margin-top: 10px;
+                font-size: 0.6rem;
+                margin:auto;
+              
+
+
+            }
+
+
+
+            .tabelacontato1 {
+                margin-top:2%;
+                justify-content: center;
+                margin:5%;
+                width: 95%;
+                
+
+
+
+
+            }
+
+          
+
+
+
+            .Título2 {
+                text-align: center;
+                justify-content: center;
+                padding-top: 0%;
+            }
+
+            #section2 {
+                object-fit: scale-down;
+                background-attachment: fixed;
+                justify-content: center;
+                background-position: center;
+                background-size: cover;
+            }
+
+            h3 {
+                padding: 10px;
+                text-align: center;
+                font-size: 1rem;
+            }
+
+            #section3 {
+                height:auto;
+                margin-top: 30px;
+                flex-wrap: wrap;
+
+
+
+            }
+
+            .polaroid {
+                gap: 0;
+                margin-top: 40%;
+                margin-bottom: 2vh;
+                margin-left: 15px;
+                margin-right: 15px;
+
+                align-items: center;
+                justify-content: center;
+                object-fit: cover;
+                width: 90vw;
+                height: min-content;
+
+            }
+
+            .polaroid img {
+                width: 100%;
+                height: 200px;
+                display: block;
+            }
+
+            p.p4 {
+                margin-top: -10vh;
+            }
+
+            footer {
+
+                max-height: 30vh;
+                margin-bottom: 5px;
+                width: 100vw;
+                margin: auto;
+            }
+            h1 {
+            width: 90%;
+            text-align: justify;
+            font-size: 1.257rem;
+            font-weight: bold;
+            }
+        }
+    </style>
+    
+</head>
+<main>
+
+    <header> <!--NAVBAR-->
+
+        <nav class="navbar navbar-expand-lg"><!--bg-body-tertiary-->
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">CPqCTR</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="height: 30px;"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="O Centro.html">O Centro</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Infraestrutura
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="LRAD.html">LRAD</a></li>
+                                <li><a class="dropdown-item" href="LPAM.html">LPAM</a></li>
+                                <li><a class="dropdown-item" href="LARX.html">LARX</a></li>
+                                <li><a class="dropdown-item" href="LAMP.html">LAMP</a></li>
+                                <li><a class="dropdown-item" href="LPA.html">LPA</a></li>
+                                <li><a class="dropdown-item" href="LEL.html">LEL</a></li>
+                                <li><a class="dropdown-item" href="LPA.html">LPA</a></li>
+                                <li><a class="dropdown-item" href="LEG.html">LEG</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href=".html">Auditório</a></li>
+                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Pesquisa.html">Pesquisa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="equipe.html">Equipe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section4">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section5">Localização</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Links
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Equipe2.html">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <span class="navbar-text">
+                        <!--Navbar text with an inline element-->
+                    </span>
+                </div>
+            </div>
+        </nav>
+        <!--END OF NAVBAR-->
+    </header>
+
+    <body>
+
+        <img class="banner" src="Assets/Externa06.jpg" alt="CTR">
+
+        <section ID="section1"> <!--APRESENTAÇÃO-->
+
+
+
+            <h1>Bem vindo(a) ao Centro de Pesquisas em Ciências e Tecnologias das Radiações - CPqCTR</h1>
+
+            <div>
+                <p id="apresentação">O CPqCTR focaliza sua missão na produção de conhecimentos e novas tecnologias, e na
+                    formação de novos pesquisadores em temas relacionados às aplicações tecnológicas das radiações, em
+                    diversas áreas, como a saúde, o meio ambiente, a agricultura e a indústria.</p>
+            </div>
+            <div class="button"><a href="O Centro.html#Section6"><button>Saiba mais</button></a></div>
+            </div><br>
+            <!--AUTO SLIDESHOW-->
+            <div class="slideshow-container">
+                <div class="slide">
+                  <img src="Assets\Foto 5 Mestranda Krizia Capizzi junto a co-orientadora Prof. Agnes Fausto.jpg" alt="Imagem 1">
+                  <div class="caption">Legenda da imagem 1</div>
+                </div>
+            
+                <div class="slide">
+                  <img src="Assets\Foto 1 ANALISE DE RESULTADOS NO ESPECTROMETRO GAMMA.jpg" alt="Imagem 2">
+                  <div class="caption">Legenda da imagem 2</div>
+                </div>
+            
+                <div class="slide">
+                  <img src="Assets\Foto 2. EXPOSIÇÃO DE RESULTADOS NO AFM.jpg" alt="Imagem 3">
+                  <div class="caption">Legenda da imagem 3</div>
+                </div>
+            
+                <div class="slide">
+                    <img src="Assets\black-board.jpg" alt="Imagem 3">
+                    <div class="caption">Legenda da imagem 4</div>
+                  </div>
+              </div>
+            
+              <script>
+                var slides = document.querySelectorAll('.slide');
+                var currentSlide = 1;
+                var slideInterval = setInterval(nextSlide, 2000); // Altere o intervalo de tempo aqui (em milissegundos)
+            
+                function nextSlide() {
+                  slides[currentSlide].style.display = 'none';
+                  currentSlide = (currentSlide + 1) % slides.length;
+                  slides[currentSlide].style.display = 'block';
+                }
+              </script>
+            <!--AUTO SLIDESHOW-->
+           <!-- <div class="quadro1">
+                <img class="img" src="Assets/mamografo.jpg" alt="mamografo">
+
+            </div>
+
+            <div class="quadro2">
+                <img class="img" src="Assets/IMG_20230315_100945.jpg" alt="spectrometro">
+
+                <div class="quadro3">
+                    <img class="img" src="Assets/forçaatomica.jpg" alt="forcaatomica">
+                </div>
+
+                <div class="quadro4">
+                    <img class="img" src="#" alt="">
+                </div>
+
+            </div>-->
+
+        </section>
+
+
+        <section ID="section2"> <!--ÁTOMO-->
+            <div class="conteudo-fixo">
+                <h3>Seria uma coisa triste ser um átomo num universo sem físicos. E os físicos são feitos de átomos.
+                    <br> Um físico é a maneira de um átomo saber que existem átomos.
+                </h3> <br>
+                <p5>George Wald</p5>
+            </div>
+        </section>
+
+        <section ID="section3"> <!--NOTÍCIAS-->
+            <h1 Class="Título1">Notícias</h1>
+            <div class="polaroid">
+                <img src="Assets/Foto 5 Mestranda Krizia Capizzi junto a co-orientadora Prof. Agnes Fausto.jpg"
+                    alt="Recepção">
+                <div class="caption">Pesquisas utilizando Raios-X. <a href="pesquisa.html#section9"><br> Saiba mais</a> </div>
+            </div>
+
+            <div class="polaroid">
+                <img src="Assets/Foto 1 ANALISE DE RESULTADOS NO ESPECTROMETRO GAMMA.jpg" alt="8 de Março 2023">
+                <div class="caption">Pesquisas utilizando Radiação Gama. <a href="pesquisa.html#section9"><br> Saiba mais</a> </div>
+            </div>
+
+            <div class="polaroid">
+                <img src="Assets/Foto 2. EXPOSIÇÃO DE RESULTADOS NO AFM.jpg" alt="8 de Março 2023">
+                <div class="caption">Microscopia de Força Atômica. <a href="pesquisa.html#section9"><br> Saiba mais</a> </div>
+            </div>
+
+
+
+        </section>
+
+
+        <section ID="section4"> <!--CONTATO-->
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1 Class="Título2" style="margin: auto;margin-bottom: 5%; justify-content: center;">Contato</h1>
+            <div id="divcontato" style="justify-items: center; text-align: center;margin: auto; margin-right: auto;">
+                <table style="margin: auto;" class="tabelacontato1">
+                    <th style="font-size: 2rem;">Geral</th>
+
+                  
+                    <tr>
+                        <td><img class="e-mail" src="Assets/icons/e-mail 50px.png.png"> <span style="font-size: 1.4rem; vertical-align: middle;"> cpqctr@uesc.br</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="phone" src="Assets/icons/phone 50px.png.png"><span style="font-size: 1.4rem; vertical-align: middle;"> (73) 3680-5057</span></p>
+                        </td>
+
+                    </tr>
+<tr></tr>
+<tr></tr>
+                    <th style="font-size: 2rem;">Direção</th>
+                    </tr>
+                    <tr>
+
+
+
+                        <td>
+                            <p> <span>Prof. Fermin G. Velasco</span></p>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <tr><td> 
+
+                        </td></tr>
+
+                        <td><img style="font-size: 1rem;" class="e-mail" src="Assets/icons/e-mail 50px.png.png">
+                            <span style="font-size: 1.4rem; vertical-align: middle;"> fermin@uesc.br</span></p>
+                        </td>
+
+                    </tr>
+                    <tr>
+<tr></tr>
+<tr></tr>
+                        <td>
+                            <p> <span>Prof. Paulo Ambrósio</span></p>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td><img class="e-mail" src="Assets/icons/e-mail 50px.png.png"> <span style="font-size: 1.4rem; vertical-align: middle;"> peambrosio@uesc.br</span>
+                            </p>
+                        </td>
+
+                    </tr>
+
+
+                </table>
+            </div>
+
+            <p class="p4">jannoon028 (Freepik)</p>
+
+
+        </section>
+
+        <section ID="section5"> <!--MAPA-->
+
+            <iframe Class="mapa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4425.075217100717!2d-39.17284562425936!3d-14.79715319919273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x739a81963f31637%3A0x4e525ce9d225dbe9!2sCentro%20de%20Pesquisas%20em%20Ci%C3%AAncias%20e%20Tecnologias%20das%20Radia%C3%A7%C3%B5es%20-%20CPqCTR!5e1!3m2!1spt-BR!2sbr!4v1684151852510!5m2!1spt-BR!2sbr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </section>
+        <footer> <!--FOOTER-->
+
+            <div class="endereço" p>
+       
+                <p>© CPqCTR </p> <br><br>
+                UNIVERSIDADE ESTADUAL DE SANTA CRUZ </br>
+                Campus Soane Nazaré de Andrade, Rodovia Jorge Amado, </br>
+                km 16, Bairro Salobrinho.
+                CEP 45662-900. Ilhéus-Bahia </p>
+                <br>
+                
+                <p><a style="font-size: medium; color:blue; text-decoration: underline;" href="">Desenvolvido por Aroldo Dias</a></p>
+        
+              </div>
+
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+
+    </body>
+</main>
+
+</html>
