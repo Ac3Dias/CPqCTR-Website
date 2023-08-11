@@ -10,7 +10,7 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css"> <!--Referenciado ao css-->
     <style>
-        @media screen and (min-width:320px) and (max-width:768px) {
+        @media (min-width:320px) and (max-width:768px) {
 
             /*MENU*/
             main {
@@ -93,19 +93,26 @@
 
             }
 
+            section {
+                display: block;
+
+            }
+
         }
     </style>
     <style>
         /*Imagens com legendas deslizantes*/
-
+        BODY {
+            width: 100VW;
+        }
 
 
         .image-container {
             display: inline-block;
             width: 100vw;
-            height: auto;
+            height: 65vh;
             flex-direction: column;
-            padding: 20px;
+
             align-items: center;
             margin: auto;
 
@@ -113,68 +120,89 @@
 
         .image-box {
             display: inline;
-            position: relative;
+            position: sticky;
             width: 90vw;
             height: auto;
-            transition: width 0.3s;
-            margin-top: 0vh;
+            margin-top: 0%;
             margin-left: 10vw;
             padding: 0;
+            border-radius: 15px;
 
 
         }
 
-      /* Estilos regulares da imagem */
-.image-box img {
-    width: 300px;
-    height: auto;
-    border-radius: 15px;
-    padding: auto;
-    margin-left: 1%;
-    margin-right: auto;
-    
+        /* Estilos regulares da imagem */
+        .image-box img {
+            width: 300px;
+            height: auto;
+            border-radius: 15px;
+            margin-top: 2%;
+            margin-left: 0vw;
+            margin-right: auto;
+            margin-bottom: 30%;
+
+        }
+
+        /* Estilos regulares do texto */
+        .text-box {
+            background-color: #0789e63f;
+            border-radius: 15px;
+            display: inline-block;
+            width: 25vw;
+            overflow: hidden;
+            opacity: 1;
+            top: -67%;
+            height: 20%;
+            margin-left: 5vw;
+            position: relative;
+            padding: 2%;
+            z-index: -100;
+            transition: height 4s;
+        }
+
+
+      
+
+
+
+        /*Estilos quando o mouse estiver sobre a imagem ou o texto .text-box:hover,*/
+        img:hover {
+            width: 22.5vw;
+            transition: width 4s;
+
+        }
+
+        .text-box:hover, img:hover {
+    top: 10vh;
+    margin-bottom: 2vh;
+    transition: top 4s, margin-bottom 4s; /* Specify the properties being transitioned */
 }
 
-/* Estilos regulares do texto */
-.text-box {
-    display: inline-block;
-    width: 50vw;
-    overflow: hidden;
+        /* Estilos adicionais do texto quando o mouse estiver sobre ele */
+ .text-box:hover {
     opacity: 1;
-    
-    
+    width: 45vw;
+    height: 120vh;
+    top: 10%;
+    z-index: 99999;
+    margin-bottom: 5%;
+    transition: opacity 4s, width 4s, height 4s, top 4s, z-index 0.4s, margin-bottom 0.4s; /* Specify the properties being transitioned */
 }
 
-/* Estilos quando o mouse estiver sobre a imagem ou o texto */
-.image-box img:hover,
-.text-box:hover {
-    width: 700px;
-    height: auto;
-    opacity: 1;
-    
-}
+        .text-box.txt2 {
+            margin-top: 50vh;
+        }
 
-/* Estilos adicionais do texto quando o mouse estiver sobre ele */
-.text-box:hover {
-    color: black;
-  
-    position: absolute;
-    background-color: #9d9f9e2b;
-    border-radius: 15px;
-    left: 45%;
-    top: 50px;
-    padding: 2%;
-}
 
-        
-        .dropdown-menu:hover{
+        .dropdown-menu:hover {
             z-index: 99999;
         }
 
- 
+        .img {
+            margin: 0px;
+        }
 
 
-     
 
         /*Imagens com legendas deslizantes*/
     </style>
@@ -195,13 +223,14 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
-                   
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Infraestrutura
                         </a>
                         <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Laboratórios.html">Laboratórios</a></li>
                             <li><a class="dropdown-item" href="LRAD.html">LRAD</a></li>
                             <li><a class="dropdown-item" href="LPAM.html">LPAM</a></li>
                             <li><a class="dropdown-item" href="LARX.html">LARX</a></li>
@@ -216,9 +245,9 @@
                             <li><a class="dropdown-item" href=".html">Auditório</a></li>
                         </ul>
                     <li style="background-color: #2bad61; font-weight: bold; border-radius: 5px;" class="nav-item">
-                        <a class="nav-link" href="LRAD.html">Voltar</a>
+                        <a class="nav-link" href="index.html#section3">Voltar</a>
                     </li>
-                   
+
                 </ul>
                 <span class="navbar-text">
                     <!--Navbar text with an inline element-->
@@ -230,128 +259,251 @@
 </header>
 
 <body>
-    
-
-   
+    <section>
         <div class="image-container">
             <div class="image-box">
                 <img src="Assets\mamografo.jpg" alt="Imagem 1">
+
                 <div class="text-box">
-                    <div class="subtitulo">Especificações:</div>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td class="campo">Fabricante:</td>
-                                <td>Hologic</td>
-                            </tr>
-                            <tr>
-                                <td class="campo">Modelo:</td>
-                                <td>Selenia</td>
-                            </tr>
-                            <tr>
-                                <td class="campo">Local Físico:</td>
-                                <td>LRAD</td>
-                            </tr>
-                            <tr>
-                                <td class="campo">Recurso:</td>
-                                <td>FINEP</td>
-                            </tr>
-                            <tr>
-                                <td class="campo">Edital:</td>
-                                <td>02/2013</td>
-                            </tr>
-                            <tr>
-                                <td class="campo">Valor:</td>
-                                <td>R$ 650.00,00</td>
-                            </tr>
 
-                            <tr>
-                                <td class="campo secao">Condições Gerais de Operação</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="campo">Temperatura Média:</td>
-                                <td>De 20º C até 30º C</td>
-                            </tr>
-                            <tr>
-                                <td class="campo">Temperatura Média:</td>
-                                <td>&lt;10 C/hr</td>
-                            </tr>
-                            <tr>
-                                <td class="campo">Humidade Relativa Média:</td>
-                                <td>20% até 80%, não condensado</td>
-                            </tr>
+                    <div class="subtitulo"><strong>Mamógrafo Digital</strong><br>Especificações:</div><br>
+                    <div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="campo">Fabricante:</td>
+                                    <td>Hologic</td>
+                                </tr>
+                                <tr>
+                                    <td class="campo">Modelo:</td>
+                                    <td>Selenia</td>
+                                </tr>
+                                <tr>
+                                    <td class="campo">Local Físico:</td>
+                                    <td>LRAD</td>
+                                </tr>
+                                <tr>
+                                    <td class="campo">Recurso:</td>
+                                    <td>FINEP</td>
+                                </tr>
+                                <tr>
+                                    <td class="campo">Edital:</td>
+                                    <td>02/2013</td>
+                                </tr>
+                                <tr>
+                                    <td class="campo">Valor:</td>
+                                    <td>R$ 650.00,00</td>
+                                </tr>
 
-                            <tr>
-                                <td class="campo secao">Padrão de Aquisição da Estação de Trabalho</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="campo">CPU:</td>
-                                <td>Intel Multi-Core</td>
-                            </tr>
-                            <tr>
-                                <td class="campo">Memória:</td>
-                                <td>16 GB RAM (minímo)</td>
-                            </tr>
-                            <tr>
-                                <td class="campo">Disco Rígido:</td>
-                                <td>1 TB (minímo)</td>
-                            </tr>
-                            <tr>
-                                <td class="campo">Mídia de Armazenamento:</td>
-                                <td>DVD +/- R/W</td>
-                            </tr>
-                            <tr>
-                                <td class="campo">Tecnologia do Monitor de Imagens:</td>
-                                <td>Monitor de LCD colorido com 2,0 megapixel </td>
-                            </tr>
-                            <tr>
-                                <td class="campo">Monitor de Interface com Usuário:</td>
-                                <td>Monitor de LCD colorido com 1,2 megapixel </td>
-                            </tr>
-                            <tr>
-                                <td class="campo">Sistema Operacional:</td>
-                                <td>Microsoft Windows 7/64 bits, embutido</td>
-                            </tr>
-                            <tr>
-                                <td class="campo">Dispositivos de Entrada:</td>
-                                <td>Teclado, <i>mouse</i></td>
-                            </tr>
+                                <tr>
+                                    <td class="campo secao">Condições Gerais de Operação</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="campo">Temperatura Média:</td>
+                                    <td>De 20º C até 30º C</td>
+                                </tr>
+                                <tr>
+                                    <td class="campo">Temperatura Média:</td>
+                                    <td>&lt;10 C/hr</td>
+                                </tr>
+                                <tr>
+                                    <td class="campo">Humidade Relativa Média:</td>
+                                    <td>20% até 80%, não condensado</td>
+                                </tr>
 
-                            <tr>
-                                <td class="campo secao">Receptor de Imagens Digital</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="campo">Tipo:</td>
-                                <td>TFT baseado na tecnologia <i>Direct Capture</i></td>
-                            </tr>
-                            <tr>
-                                <td class="campo">Material de Absorção de Raios X:</td>
-                                <td>Selenium Amorfo</td>
-                            </tr>
-                            <tr>
-                                <td class="campo">Dimensão do Receptor de Imagens:</td>
-                                <td>Chapa simple de 24 cm x 29 cm</td>
-                            </tr>
-                            <tr>
-                                <td class="campo">Modos de Imagens:</td>
-                                <td>Mamografia convencional; Tomossíntese; Mamografia convencional e
-                                    tomossíntese combinados</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                <tr>
+                                    <td class="campo secao">Padrão de Aquisição da Estação de Trabalho</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="campo">CPU:</td>
+                                    <td>Intel Multi-Core</td>
+                                </tr>
+                                <tr>
+                                    <td class="campo">Memória:</td>
+                                    <td>16 GB RAM (minímo)</td>
+                                </tr>
+                                <tr>
+                                    <td class="campo">Disco Rígido:</td>
+                                    <td>1 TB (minímo)</td>
+                                </tr>
+                                <tr>
+                                    <td class="campo">Mídia de Armazenamento:</td>
+                                    <td>DVD +/- R/W</td>
+                                </tr>
+                                <tr>
+                                    <td class="campo">Tecnologia do Monitor de Imagens:</td>
+                                    <td>Monitor de LCD colorido com 2,0 megapixel </td>
+                                </tr>
+                                <tr>
+                                    <td class="campo">Monitor de Interface com Usuário:</td>
+                                    <td>Monitor de LCD colorido com 1,2 megapixel </td>
+                                </tr>
+                                <tr>
+                                    <td class="campo">Sistema Operacional:</td>
+                                    <td>Microsoft Windows 7/64 bits, embutido</td>
+                                </tr>
+                                <tr>
+                                    <td class="campo">Dispositivos de Entrada:</td>
+                                    <td>Teclado, <i>mouse</i></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="campo secao">Receptor de Imagens Digital</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="campo">Tipo:</td>
+                                    <td>TFT baseado na tecnologia <i>Direct Capture</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="campo">Material de Absorção de Raios X:</td>
+                                    <td>Selenium Amorfo</td>
+                                </tr>
+                                <tr>
+                                    <td class="campo">Dimensão do Receptor de Imagens:</td>
+                                    <td>Chapa simple de 24 cm x 29 cm</td>
+                                </tr>
+                                <tr>
+                                    <td class="campo">Modos de Imagens:</td>
+                                    <td>Mamografia convencional; Tomossíntese; Mamografia convencional e
+                                        tomossíntese combinados</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <!--<section>
+    <div class="image-container">
+      <div class="image-box">
+          <img  src="Assets\LRAD 3.jpg" alt="Imagem 2">
+   RESOLVER PROBLEMA NA ALTURA     
+          <div class="text-box txt2">
+              
+              <div class="subtitulo"><strong>Raio-X</strong><br>Especificações:</div><br>
+              <div>
+                  <table>
+                      <tbody>
+                          <tr>
+                              <td class="campo">Fabricante:</td>
+                              <td>Hologic</td>
+                          </tr>
+                          <tr>
+                              <td class="campo">Modelo:</td>
+                              <td>Selenia</td>
+                          </tr>
+                          <tr>
+                              <td class="campo">Local Físico:</td>
+                              <td>LRAD</td>
+                          </tr>
+                          <tr>
+                              <td class="campo">Recurso:</td>
+                              <td>FINEP</td>
+                          </tr>
+                          <tr>
+                              <td class="campo">Edital:</td>
+                              <td>02/2013</td>
+                          </tr>
+                          <tr>
+                              <td class="campo">Valor:</td>
+                              <td>R$ 650.00,00</td>
+                          </tr>
 
-            
-  
-                
+                          <tr>
+                              <td class="campo secao">Condições Gerais de Operação</td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td class="campo">Temperatura Média:</td>
+                              <td>De 20º C até 30º C</td>
+                          </tr>
+                          <tr>
+                              <td class="campo">Temperatura Média:</td>
+                              <td>&lt;10 C/hr</td>
+                          </tr>
+                          <tr>
+                              <td class="campo">Humidade Relativa Média:</td>
+                              <td>20% até 80%, não condensado</td>
+                          </tr>
 
-        
-            
-   
+                          <tr>
+                              <td class="campo secao">Padrão de Aquisição da Estação de Trabalho</td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td class="campo">CPU:</td>
+                              <td>Intel Multi-Core</td>
+                          </tr>
+                          <tr>
+                              <td class="campo">Memória:</td>
+                              <td>16 GB RAM (minímo)</td>
+                          </tr>
+                          <tr>
+                              <td class="campo">Disco Rígido:</td>
+                              <td>1 TB (minímo)</td>
+                          </tr>
+                          <tr>
+                              <td class="campo">Mídia de Armazenamento:</td>
+                              <td>DVD +/- R/W</td>
+                          </tr>
+                          <tr>
+                              <td class="campo">Tecnologia do Monitor de Imagens:</td>
+                              <td>Monitor de LCD colorido com 2,0 megapixel </td>
+                          </tr>
+                          <tr>
+                              <td class="campo">Monitor de Interface com Usuário:</td>
+                              <td>Monitor de LCD colorido com 1,2 megapixel </td>
+                          </tr>
+                          <tr>
+                              <td class="campo">Sistema Operacional:</td>
+                              <td>Microsoft Windows 7/64 bits, embutido</td>
+                          </tr>
+                          <tr>
+                              <td class="campo">Dispositivos de Entrada:</td>
+                              <td>Teclado, <i>mouse</i></td>
+                          </tr>
+
+                          <tr>
+                              <td class="campo secao">Receptor de Imagens Digital</td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td class="campo">Tipo:</td>
+                              <td>TFT baseado na tecnologia <i>Direct Capture</i></td>
+                          </tr>
+                          <tr>
+                              <td class="campo">Material de Absorção de Raios X:</td>
+                              <td>Selenium Amorfo</td>
+                          </tr>
+                          <tr>
+                              <td class="campo">Dimensão do Receptor de Imagens:</td>
+                              <td>Chapa simple de 24 cm x 29 cm</td>
+                          </tr>
+                          <tr>
+                              <td class="campo">Modos de Imagens:</td>
+                              <td>Mamografia convencional; Tomossíntese; Mamografia convencional e
+                                  tomossíntese combinados</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>    
+</section> -->
+
+
+
+
+
+
+
+
+
     <script>
         $(document).ready(function () {
             // This function will be called when the user hovers over an image
@@ -381,7 +533,7 @@
             $(".image-box").hover(showText, hideText);
         });
     </script>
-  
+
 
 </body>
 
