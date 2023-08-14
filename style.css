@@ -766,7 +766,7 @@ td {
 
 }
 
-#section5 {
+#Section5 {
   /*MAPA*/
   top: 0;
 
@@ -1055,11 +1055,7 @@ p2 {
 .mapa {
   display: block;
   top: 90vh;
-  margin: auto;
-  width: 100%;
-
-
-
+  width: 100vw;
 }
 
 .equipe {
