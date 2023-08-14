@@ -57,7 +57,7 @@
       height: 322px;
       margin-left: 2%;
       margin-right: auto;
-      margin-top: 70vh;
+      margin-top: 73vh;
       
       
     }
@@ -133,6 +133,7 @@
                 align-items: right;
                 padding: 0.3%;
                 text-align: left;
+                z-index: 99999;
 
 
             }
@@ -217,7 +218,12 @@
             }
 
           
-
+            .Título1 {
+                text-align: center;
+                justify-content: center;
+                padding-top: 10%;
+                font-size: 3rem;
+            }
 
 
             .Título2 {
@@ -287,12 +293,20 @@
             font-size: 1.257rem;
             font-weight: bold;
             }
+            .mapa {
+  display: block;
+  top: 90vh;
+  width: 100vw;
+  height: 100vh;
+}
         }
     </style>
     <style>
         img:hover{
             filter: brightness(1.1);
         }
+
+
     </style>
     
 </head>
@@ -322,7 +336,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="Laboratórios.html">Laboratórios</a></li>
-                                <li><a class="dropdown-item" href="LRAD.html">LRAD</a></li>
+                                <!--<li><a class="dropdown-item" href="LRAD.html">LRAD</a></li>
                                 <li><a class="dropdown-item" href="LRAD.html">LPAM</a></li>
                                 <li><a class="dropdown-item" href="LARX.html">LARX</a></li>
                                 <li><a class="dropdown-item" href="LAMP.html">LAMP</a></li>
@@ -330,6 +344,7 @@
                                 <li><a class="dropdown-item" href="LEL.html">LEL</a></li>
                                 <li><a class="dropdown-item" href="LPA.html">LPA</a></li>
                                 <li><a class="dropdown-item" href="LEG.html">LEG</a></li>
+                                -->
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -389,26 +404,26 @@
             </div>
             <div class="button"><a href="O Centro.html#Section6"><button>Saiba mais</button></a></div>
             </div><br>
-            <!--AUTO SLIDESHOW-->
+            <!--AUTO SLIDESHOW--> 
             <div class="slideshow-container">
                 <div class="slide">
                   <img src="Assets\Foto 5 Mestranda Krizia Capizzi junto a co-orientadora Prof. Agnes Fausto.jpg" alt="Imagem 1">
-                  <div class="caption">Legenda da imagem 1</div>
+                  <div class="caption">Notícias 1</div>
                 </div>
             
                 <div class="slide">
                   <img src="Assets\Foto 1 ANALISE DE RESULTADOS NO ESPECTROMETRO GAMMA.jpg" alt="Imagem 2">
-                  <div class="caption">Legenda da imagem 2</div>
+                  <div class="caption">Notícias 2</div>
                 </div>
             
                 <div class="slide">
                   <img src="Assets\Foto 2. EXPOSIÇÃO DE RESULTADOS NO AFM.jpg" alt="Imagem 3">
-                  <div class="caption">Legenda da imagem 3</div>
+                  <div class="caption">Notícias 3</div>
                 </div>
             
                 <div class="slide">
                     <img src="Assets\black-board.jpg" alt="Imagem 3">
-                    <div class="caption">Legenda da imagem 4</div>
+                    <div class="caption">Notícias 4</div>
                   </div>
               </div>
             
@@ -466,37 +481,37 @@
                 </div>
             
                 <div class="polaroid">
-                    <img src="Assets/Foto 1 ANALISE DE RESULTADOS NO ESPECTROMETRO GAMMA.jpg" alt="8 de Março 2023">
+                    <img src="Assets/Foto 1 ANALISE DE RESULTADOS NO ESPECTROMETRO GAMMA.jpg" alt="Ectometro Gama">
                     <div class="caption">Laboratório de Espectometria GAMA - LEG<a href="pesquisa.html#section9"><br> Saiba mais</a> </div>
                 </div>
             
                 <div class="polaroid">
-                    <img src="Assets\LAMP - meios porosos.jpg" alt="8 de Março 2023">
+                    <img src="Assets\LAMP - meios porosos.jpg" alt="">
                     <div class="caption">Laboratório de Análises Meios Porosos - LAMP <a href="pesquisa.html#section9"><br> Saiba mais</a> </div>
                 </div>
             
                 <div class="polaroid">
-                    <img src="Assets\LPA.jpg" alt="8 de Março 2023">
+                    <img src="Assets\LPA.jpg" alt="">
                     <div class="caption">Laboratório de Pesquisas Ambientais - LPA<a href="pesquisa.html#section9"><br> Saiba mais</a> </div>
                 </div>
             
                 <div class="polaroid">
-                    <img src="Assets\LEL.jpg" alt="8 de Março 2023">
+                    <img src="Assets\LEL.jpg" alt="">
                     <div class="caption">Laboratório de Eletrônica - LEL<a href="pesquisa.html#section9"><br> Saiba mais</a> </div>
                 </div>
             
                 <div class="polaroid">
-                    <img src="Assets/Foto 2. EXPOSIÇÃO DE RESULTADOS NO AFM.jpg" alt="8 de Março 2023">
+                    <img src="Assets/Foto 2. EXPOSIÇÃO DE RESULTADOS NO AFM.jpg" alt="">
                     <div class="caption">Laboratório de análises por Raio-X - LARX<a href="pesquisa.html#section9"><br> Saiba mais</a> </div>
                 </div>
             
                 <div class="polaroid">
-                    <img src="Assets\LPAM.jpg" alt="8 de Março 2023">
+                    <img src="Assets\LPAM.jpg" alt="">
                     <div class="caption">Laboratório de Preparação de Amostras - LPAM<a href="pesquisa.html#section9"><br> Saiba mais</a> </div>
                 </div>
             
                 <div class="polaroid">
-                    <img src="Assets\Auditório.jpg" alt="8 de Março 2023">
+                    <img src="Assets\Auditório.jpg" alt="">
                     <div class="caption">Auditório <a href="pesquisa.html#section9"><br> Saiba mais</a> </div>
                 </div>
             
@@ -570,13 +585,9 @@
 
         </section>
 
-        <section ID="section5"> <!--MAPA-->
-
-            <iframe Class="mapa"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4425.075217100717!2d-39.17284562425936!3d-14.79715319919273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x739a81963f31637%3A0x4e525ce9d225dbe9!2sCentro%20de%20Pesquisas%20em%20Ci%C3%AAncias%20e%20Tecnologias%20das%20Radia%C3%A7%C3%B5es%20-%20CPqCTR!5e1!3m2!1spt-BR!2sbr!4v1684151852510!5m2!1spt-BR!2sbr"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+        <section ID="Section5"> <!--MAPA-->
+      
+            <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7544.225685554855!2d-39.170271!3d-14.797158000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x739a81963f31637%3A0x4e525ce9d225dbe9!2sCentro%20de%20Pesquisas%20em%20Ci%C3%AAncias%20e%20Tecnologias%20das%20Radia%C3%A7%C3%B5es%20-%20CPqCTR!5e1!3m2!1spt-BR!2sbr!4v1692013469106!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </section>
         <footer> <!--FOOTER-->
