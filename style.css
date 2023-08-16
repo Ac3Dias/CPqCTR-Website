@@ -24,6 +24,7 @@ max-width: 2%;
   background-color: #4c7baa;
   color: #ffffff;
   font-weight: bold;
+  
 }
 
 .menu li {
@@ -448,14 +449,14 @@ background-image: url(./Assets/Externa05.jpg);
 
 #texto_aps_2 {
   /*DIV*/
-  background-color: #f2f3f680;
+  background-color: #f2f3f6d0;
   font-size: 1rem;
   display: inline;
   gap: 25px;
   border: 12px solid rgb(0, 252, 50);
   width: 30vw;
   text-align: justify;
-  height: 90vh;
+  height: 85vh;
   
   padding: 2%;
   margin-top: 2%;
@@ -471,14 +472,14 @@ background-image: url(./Assets/Externa05.jpg);
 
 #texto_aps_3 {
   /*DIV*/
-  background-color: #f2f3f680;
+  background-color: #f2f3f6d0;;
   font-size: 1.0rem;
   display: inline;
   gap: 0px;
   width: 30vw;
   text-align: justify;
   margin-left: -10%;
-  height: 90vh;
+  height: 85vh;
   margin-top: 0;
   justify-content: center;
   padding: 2%;
@@ -486,13 +487,13 @@ background-image: url(./Assets/Externa05.jpg);
 
 }
 #texto_aps_4{
-  background-color: #f2f3f680;
+  background-color: #f2f3f6d0;;
   display: inline;
   gap: 0px;
   width: 25vw;
   text-align: justify;
   padding: 2%;
-  height: 90vh;
+  height: 85vh;
   margin-top: 0;
   margin-left: -7Vw;
   padding: 2%;
@@ -646,7 +647,7 @@ button:hover {
   display: block;
   height: 100vh;
   width: 100%;
-  background-image: url("Assets/mulher-de-negocios-mao-com-graficos-financeiros-e-telefone-celular-sobre-o-laptop-na-mesa.jpg");
+  background-image: url("Assets/img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1119,7 +1120,7 @@ p {
 
   width: 30%;
   Top: 52px;
-  left: 800px;
+  left: 50VW;
 
 }
 
